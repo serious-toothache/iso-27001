@@ -1,0 +1,182 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.5",
+  "serial": 57,
+  "lineage": "6f1c2a9e-3b7d-4e8a-9c41-0d5e7b2f8a13",
+  "outputs": {},
+  "resources": [
+    {
+      "module": "module.patient_records",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-patient-records",
+            "arn": "arn:aws:s3:::tausi-prod-patient-records",
+            "id": "tausi-prod-patient-records",
+            "region": "af-south-1",
+            "tags": {
+              "DataClass": "restricted",
+              "ManagedBy": "terraform",
+              "Module": "s3-patient-data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.patient_records",
+      "mode": "managed",
+      "type": "aws_s3_bucket_versioning",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-patient-records",
+            "id": "tausi-prod-patient-records",
+            "versioning_configuration": [
+              {
+                "status": "Enabled",
+                "mfa_delete": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.patient_records",
+      "mode": "managed",
+      "type": "aws_s3_bucket_logging",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-patient-records",
+            "id": "tausi-prod-patient-records",
+            "target_bucket": "tausi-prod-s3-access-logs",
+            "target_prefix": "s3/tausi-prod-patient-records/"
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.consult_recordings",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-consult-recordings",
+            "arn": "arn:aws:s3:::tausi-prod-consult-recordings",
+            "id": "tausi-prod-consult-recordings",
+            "region": "af-south-1",
+            "tags": {
+              "DataClass": "restricted",
+              "ManagedBy": "terraform",
+              "Module": "s3-patient-data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.consult_recordings",
+      "mode": "managed",
+      "type": "aws_s3_bucket_versioning",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-consult-recordings",
+            "id": "tausi-prod-consult-recordings",
+            "versioning_configuration": [
+              {
+                "status": "Enabled",
+                "mfa_delete": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.consult_recordings",
+      "mode": "managed",
+      "type": "aws_s3_bucket_logging",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-consult-recordings",
+            "id": "tausi-prod-consult-recordings",
+            "target_bucket": "tausi-prod-s3-access-logs",
+            "target_prefix": "s3/tausi-prod-consult-recordings/"
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.patient_uploads",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-patient-uploads",
+            "arn": "arn:aws:s3:::tausi-prod-patient-uploads",
+            "id": "tausi-prod-patient-uploads",
+            "region": "af-south-1",
+            "tags": {
+              "DataClass": "confidential",
+              "ManagedBy": "terraform",
+              "Module": "s3-patient-data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "module": "module.patient_uploads",
+      "mode": "managed",
+      "type": "aws_s3_bucket_versioning",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-patient-uploads",
+            "id": "tausi-prod-patient-uploads",
+            "versioning_configuration": [
+              {
+                "status": "Enabled",
+                "mfa_delete": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

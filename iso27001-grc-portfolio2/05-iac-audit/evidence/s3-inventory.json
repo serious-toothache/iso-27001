@@ -1,0 +1,130 @@
+{
+  "retrieved_at": "2026-10-23T18:55:10Z",
+  "account_id": "111122223333",
+  "commands": [
+    "aws s3api list-buckets",
+    "aws s3api get-bucket-location",
+    "aws s3api get-bucket-versioning",
+    "aws s3api get-bucket-encryption",
+    "aws s3api get-bucket-logging",
+    "aws s3api get-bucket-tagging"
+  ],
+  "buckets": [
+    {
+      "Name": "tausi-prod-patient-records",
+      "Region": "af-south-1",
+      "CreationDate": "2025-11-04T09:12:31Z",
+      "Versioning": "Enabled",
+      "Encryption": {
+        "SSEAlgorithm": "aws:kms",
+        "KMSMasterKeyID": "arn:aws:kms:af-south-1:111122223333:key/1b2c3d4e-0001"
+      },
+      "LoggingEnabled": true,
+      "Tags": {
+        "DataClass": "restricted",
+        "ManagedBy": "terraform",
+        "Module": "s3-patient-data"
+      }
+    },
+    {
+      "Name": "tausi-prod-consult-recordings",
+      "Region": "af-south-1",
+      "CreationDate": "2025-11-04T09:12:44Z",
+      "Versioning": "Enabled",
+      "Encryption": {
+        "SSEAlgorithm": "aws:kms",
+        "KMSMasterKeyID": "arn:aws:kms:af-south-1:111122223333:key/1b2c3d4e-0002"
+      },
+      "LoggingEnabled": true,
+      "Tags": {
+        "DataClass": "restricted",
+        "ManagedBy": "terraform",
+        "Module": "s3-patient-data"
+      }
+    },
+    {
+      "Name": "tausi-prod-patient-uploads",
+      "Region": "af-south-1",
+      "CreationDate": "2026-07-15T13:27:09Z",
+      "Versioning": "Enabled",
+      "Encryption": {
+        "SSEAlgorithm": "aws:kms",
+        "KMSMasterKeyID": "arn:aws:kms:af-south-1:111122223333:key/1b2c3d4e-0003"
+      },
+      "LoggingEnabled": false,
+      "Tags": {
+        "DataClass": "confidential",
+        "ManagedBy": "terraform",
+        "Module": "s3-patient-data"
+      }
+    },
+    {
+      "Name": "tausi-prod-s3-access-logs",
+      "Region": "af-south-1",
+      "CreationDate": "2025-10-28T07:40:02Z",
+      "Versioning": "Enabled",
+      "Encryption": {
+        "SSEAlgorithm": "AES256",
+        "KMSMasterKeyID": null
+      },
+      "LoggingEnabled": false,
+      "Tags": {
+        "DataClass": "internal",
+        "ManagedBy": "terraform"
+      }
+    },
+    {
+      "Name": "tausi-cloudtrail-logs",
+      "Region": "af-south-1",
+      "CreationDate": "2025-10-28T07:40:15Z",
+      "Versioning": "Enabled",
+      "Encryption": {
+        "SSEAlgorithm": "AES256",
+        "KMSMasterKeyID": null
+      },
+      "LoggingEnabled": false,
+      "Tags": {
+        "DataClass": "internal",
+        "ManagedBy": "terraform"
+      }
+    },
+    {
+      "Name": "tausi-terraform-state",
+      "Region": "af-south-1",
+      "CreationDate": "2025-10-28T07:31:48Z",
+      "Versioning": "Enabled",
+      "Encryption": {
+        "SSEAlgorithm": "aws:kms",
+        "KMSMasterKeyID": "arn:aws:kms:af-south-1:111122223333:key/1b2c3d4e-0000"
+      },
+      "LoggingEnabled": false,
+      "Tags": {
+        "Purpose": "terraform-state"
+      }
+    },
+    {
+      "Name": "tausi-tmp-export-carol",
+      "Region": "af-south-1",
+      "CreationDate": "2026-08-21T16:03:27Z",
+      "Versioning": "Unversioned",
+      "Encryption": {
+        "SSEAlgorithm": "AES256",
+        "KMSMasterKeyID": null
+      },
+      "LoggingEnabled": false,
+      "Tags": {}
+    },
+    {
+      "Name": "tausi-dr-restore-test",
+      "Region": "eu-west-1",
+      "CreationDate": "2026-09-10T20:41:55Z",
+      "Versioning": "Unversioned",
+      "Encryption": {
+        "SSEAlgorithm": "AES256",
+        "KMSMasterKeyID": null
+      },
+      "LoggingEnabled": false,
+      "Tags": {}
+    }
+  ]
+}

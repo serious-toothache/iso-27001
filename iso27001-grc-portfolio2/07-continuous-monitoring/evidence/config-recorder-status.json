@@ -1,0 +1,43 @@
+{
+  "retrieved_at": "2026-10-23T19:31:07Z",
+  "command": "aws configservice describe-configuration-recorder-status --region <each in-scope region>",
+  "regions": {
+    "af-south-1": {
+      "name": "default",
+      "recording": true,
+      "lastStatus": "SUCCESS",
+      "lastStartTime": "2026-08-20T08:31:45Z",
+      "lastStopTime": "2026-08-14T07:58:12Z"
+    },
+    "eu-west-1": {
+      "error": "NoSuchConfigurationRecorderException",
+      "message": "Cannot find configuration recorder because the current account hasn't created a configuration recorder."
+    }
+  },
+  "alerting": {
+    "eventbridge_rule": "config-noncompliant-to-pagerduty",
+    "event_pattern": {
+      "source": [
+        "aws.config"
+      ],
+      "detail-type": [
+        "Config Rules Compliance Change"
+      ],
+      "detail": {
+        "newEvaluationResult": {
+          "complianceType": [
+            "NON_COMPLIANT"
+          ]
+        },
+        "configRuleName": [
+          "restricted-ssh",
+          "mfa-enabled-for-iam-console-access"
+        ]
+      }
+    }
+  },
+  "remediation_sla_days": {
+    "high": 7,
+    "medium": 30
+  }
+}

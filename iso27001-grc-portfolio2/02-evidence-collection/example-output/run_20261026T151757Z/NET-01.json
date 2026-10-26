@@ -1,0 +1,50 @@
+{
+  "evidence_id": "run_20261026T151757Z-NET-01",
+  "check_id": "NET-01",
+  "title": "No security group exposes SSH/RDP to the internet",
+  "iso27001_2022_annex_a": [
+    "A.8.20"
+  ],
+  "soc2_tsc": [
+    "CC6.6"
+  ],
+  "status": "FAIL",
+  "summary": "1 internet-exposed admin port rule(s) across 2 region(s).",
+  "findings": [
+    "af-south-1 sg-0a1b2c3d4e5f60002 (app-servers) allows SSH/22 from 0.0.0.0/0."
+  ],
+  "collected_at": "2026-10-26T15:17:57+00:00",
+  "as_of": "2026-10-23T00:00:00+00:00",
+  "account_id": "111122223333",
+  "scope": "regional",
+  "regions": [
+    "af-south-1",
+    "eu-west-1"
+  ],
+  "environment_source": "mock:mock_aws_environment.json",
+  "collector": {
+    "name": "collect_evidence.py",
+    "version": "2.0.0",
+    "git_commit": null
+  },
+  "evidence_tier": "2 - system output, unsigned (hashed at collection)",
+  "api_calls": [
+    "ec2:DescribeSecurityGroups"
+  ],
+  "raw": {
+    "groups_evaluated": {
+      "af-south-1": 3,
+      "eu-west-1": 1
+    },
+    "exposed_rules": [
+      {
+        "region": "af-south-1",
+        "group_id": "sg-0a1b2c3d4e5f60002",
+        "group_name": "app-servers",
+        "port": 22,
+        "cidr": "0.0.0.0/0"
+      }
+    ]
+  },
+  "raw_sha256": "7b969b3afca4af8b70c58ed45c51e4b01629a18f0d2e2b9e409f4aa929a8f2b2"
+}

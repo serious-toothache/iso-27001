@@ -1,0 +1,40 @@
+{
+  "url": "https://api.github.com/repos/tausi/tausi-platform/branches/main/protection",
+  "retrieved_at": "2026-10-23T19:18:40Z",
+  "required_status_checks": {
+    "strict": true,
+    "contexts": [
+      "build",
+      "unit-tests"
+    ]
+  },
+  "required_pull_request_reviews": {
+    "dismiss_stale_reviews": false,
+    "require_code_owner_reviews": false,
+    "require_last_push_approval": false,
+    "required_approving_review_count": 1
+  },
+  "enforce_admins": {
+    "enabled": false
+  },
+  "required_linear_history": {
+    "enabled": true
+  },
+  "allow_force_pushes": {
+    "enabled": false
+  },
+  "allow_deletions": {
+    "enabled": false
+  },
+  "restrictions": null,
+  "environments": {
+    "production": {
+      "required_reviewers": [
+        "brian-kamau",
+        "david-mutua"
+      ],
+      "prevent_self_review": false,
+      "wait_timer": 0
+    }
+  }
+}

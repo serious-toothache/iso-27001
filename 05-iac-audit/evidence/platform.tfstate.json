@@ -1,0 +1,51 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.5",
+  "serial": 23,
+  "lineage": "a2d84b10-77e5-4c3f-8b19-5e6f0c9d2a47",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "tausi_prod_s3_access_logs",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-prod-s3-access-logs",
+            "arn": "arn:aws:s3:::tausi-prod-s3-access-logs",
+            "id": "tausi-prod-s3-access-logs",
+            "region": "af-south-1",
+            "tags": {
+              "DataClass": "internal",
+              "ManagedBy": "terraform"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "tausi_cloudtrail_logs",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "tausi-cloudtrail-logs",
+            "arn": "arn:aws:s3:::tausi-cloudtrail-logs",
+            "id": "tausi-cloudtrail-logs",
+            "region": "af-south-1",
+            "tags": {
+              "DataClass": "internal",
+              "ManagedBy": "terraform"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

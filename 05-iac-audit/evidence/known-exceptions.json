@@ -1,0 +1,12 @@
+{
+  "exceptions": [
+    {
+      "id": "EXC-01",
+      "resource": "tausi-terraform-state",
+      "reason": "Terraform backend bucket. Created by the bootstrap script before Terraform can manage state, so it cannot live in its own state.",
+      "approved_by": "Platform Lead",
+      "approved_on": "2025-10-28",
+      "review_by": "2026-10-28"
+    }
+  ]
+}

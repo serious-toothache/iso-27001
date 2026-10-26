@@ -1,0 +1,7 @@
+"drift_id","rule","resource","severity","detected_at","alerted_at","ticket","ticket_opened_at","remediated_at","validated_at"
+"DRF-01","restricted-ssh","sg-0a1b2c3d4e5f60007 (staging-debug)","high","2026-07-09T11:20:04Z","2026-07-09T11:21:10Z","TT-301","2026-07-09T11:40:00Z","2026-07-10T09:05:00Z","2026-07-10T09:30:00Z"
+"DRF-02","mfa-enabled-for-iam-console-access","carol.wanjiru","high","2026-07-01T00:10:00Z","2026-07-01T00:11:02Z","","","",""
+"DRF-03","mfa-enabled-for-iam-console-access","contractor-devops","high","2026-07-01T00:10:00Z","2026-07-01T00:11:02Z","","","",""
+"DRF-04","s3-bucket-versioning-enabled","tausi-tmp-export-carol","medium","2026-08-21T16:20:31Z","","","","",""
+"DRF-05","restricted-ssh","sg-0a1b2c3d4e5f60002 (app-servers)","high","2026-09-02T07:45:18Z","2026-09-02T07:46:01Z","TT-412","2026-09-03T09:10:00Z","",""
+"DRF-06","restricted-ssh","sg-0a1b2c3d4e5f60009 (temp-vendor-access)","high","2026-09-24T13:02:44Z","2026-09-24T13:03:20Z","TT-430","2026-09-24T13:30:00Z","2026-09-25T10:15:00Z","2026-09-25T10:40:00Z"

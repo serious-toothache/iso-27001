@@ -1,0 +1,42 @@
+{
+  "evidence_id": "run_20261026T151757Z-CRY-01",
+  "check_id": "CRY-01",
+  "title": "EBS encryption by default enabled",
+  "iso27001_2022_annex_a": [
+    "A.8.24"
+  ],
+  "soc2_tsc": [
+    "CC6.1",
+    "C1.1"
+  ],
+  "status": "FAIL",
+  "summary": "EBS encryption by default is off in 1 of 2 region(s).",
+  "findings": [
+    "New EBS volumes in eu-west-1 are not encrypted by default."
+  ],
+  "collected_at": "2026-10-26T15:17:57+00:00",
+  "as_of": "2026-10-23T00:00:00+00:00",
+  "account_id": "111122223333",
+  "scope": "regional",
+  "regions": [
+    "af-south-1",
+    "eu-west-1"
+  ],
+  "environment_source": "mock:mock_aws_environment.json",
+  "collector": {
+    "name": "collect_evidence.py",
+    "version": "2.0.0",
+    "git_commit": null
+  },
+  "evidence_tier": "2 - system output, unsigned (hashed at collection)",
+  "api_calls": [
+    "ec2:GetEbsEncryptionByDefault"
+  ],
+  "raw": {
+    "ebs_encryption_by_default": {
+      "af-south-1": true,
+      "eu-west-1": false
+    }
+  },
+  "raw_sha256": "7315896fc64d022f4e4ee32d489edfb8ef4def9c42689b340c8ee2acfe30a116"
+}

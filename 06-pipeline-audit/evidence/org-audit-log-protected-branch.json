@@ -1,0 +1,60 @@
+{
+  "source": "GitHub organization audit log, filter: action:protected_branch repo:tausi/tausi-platform",
+  "period": "2026-07-01..2026-09-30",
+  "retrieved_at": "2026-10-23T19:20:11Z",
+  "events": [
+    {
+      "@timestamp": "2026-07-03T08:41:19Z",
+      "action": "protected_branch.update",
+      "actor": "brian-kamau",
+      "repo": "tausi/tausi-platform",
+      "branch": "main",
+      "changes": {
+        "required_status_checks.contexts": {
+          "from": [
+            "build"
+          ],
+          "to": [
+            "build",
+            "unit-tests"
+          ]
+        }
+      }
+    },
+    {
+      "@timestamp": "2026-08-12T09:14:02Z",
+      "action": "protected_branch.update",
+      "actor": "brian-kamau",
+      "repo": "tausi/tausi-platform",
+      "branch": "main",
+      "changes": {
+        "required_approving_review_count": {
+          "from": 1,
+          "to": 0
+        }
+      }
+    },
+    {
+      "@timestamp": "2026-08-12T12:47:30Z",
+      "action": "protected_branch.update",
+      "actor": "brian-kamau",
+      "repo": "tausi/tausi-platform",
+      "branch": "main",
+      "changes": {
+        "required_approving_review_count": {
+          "from": 0,
+          "to": 1
+        }
+      }
+    },
+    {
+      "@timestamp": "2026-09-05T08:04:00Z",
+      "action": "protected_branch.policy_override",
+      "actor": "amina-otieno",
+      "repo": "tausi/tausi-platform",
+      "branch": "main",
+      "pull_request": 262,
+      "reason": "required status check unit-tests failing"
+    }
+  ]
+}

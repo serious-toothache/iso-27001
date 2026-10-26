@@ -1,0 +1,91 @@
+{
+  "query": "eventName = CreateBucket, eventTime 2026-07-01T00:00:00Z to 2026-09-30T23:59:59Z, all regions",
+  "source": "CloudTrail Lake",
+  "retrieved_at": "2026-10-23T19:02:41Z",
+  "Records": [
+    {
+      "eventVersion": "1.09",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAEXAMPLECIROLE:GitHubActions",
+        "arn": "arn:aws:sts::111122223333:assumed-role/tausi-ci-deploy/GitHubActions",
+        "accountId": "111122223333",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "arn": "arn:aws:iam::111122223333:role/tausi-ci-deploy",
+            "userName": "tausi-ci-deploy"
+          }
+        }
+      },
+      "eventTime": "2026-07-15T13:27:09Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "CreateBucket",
+      "awsRegion": "af-south-1",
+      "sourceIPAddress": "13.244.0.15",
+      "userAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.9.5 (+https://www.terraform.io) terraform-provider-aws/5.61.0",
+      "requestParameters": {
+        "bucketName": "tausi-prod-patient-uploads",
+        "Host": "tausi-prod-patient-uploads.s3.af-south-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "4c1a7e2b-0f3d-4b6a-9e85-1d2c3b4a5f60",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "111122223333"
+    },
+    {
+      "eventVersion": "1.09",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLECAROLWAN",
+        "arn": "arn:aws:iam::111122223333:user/carol.wanjiru",
+        "accountId": "111122223333",
+        "accessKeyId": "ASIAEXAMPLECONSOLE01",
+        "userName": "carol.wanjiru"
+      },
+      "eventTime": "2026-08-21T16:03:27Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "CreateBucket",
+      "awsRegion": "af-south-1",
+      "sourceIPAddress": "203.0.113.45",
+      "userAgent": "AWS Internal",
+      "requestParameters": {
+        "bucketName": "tausi-tmp-export-carol",
+        "Host": "tausi-tmp-export-carol.s3.af-south-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "9b8e7d6c-5a4f-4e3d-8c2b-1a0f9e8d7c6b",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "111122223333",
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.09",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLECONTRACT",
+        "arn": "arn:aws:iam::111122223333:user/contractor-devops",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "contractor-devops"
+      },
+      "eventTime": "2026-09-10T20:41:55Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "CreateBucket",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "198.51.100.77",
+      "userAgent": "aws-cli/2.17.20 md/awscrt#0.20.11 ua/2.0 os/linux#6.5.0 md/command#s3api.create-bucket",
+      "requestParameters": {
+        "bucketName": "tausi-dr-restore-test",
+        "Host": "tausi-dr-restore-test.s3.eu-west-1.amazonaws.com"
+      },
+      "responseElements": null,
+      "eventID": "2f3e4d5c-6b7a-4980-a1b2-c3d4e5f60718",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "111122223333"
+    }
+  ]
+}

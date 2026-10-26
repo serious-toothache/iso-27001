@@ -1,3 +1,0 @@
-# tausi/tausi-platform: .github/CODEOWNERS at commit 8d183f16
-/app/        @tausi/engineering
-/terraform/  @tausi/platform
